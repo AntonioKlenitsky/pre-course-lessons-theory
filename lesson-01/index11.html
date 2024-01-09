@@ -1,0 +1,67 @@
+<body>
+    <script>
+       const playlist = {
+        title: "Rap Hits",
+        coverImageUrl: 'girl.svg',
+        info: {
+            totalTracksCount: 4,
+            totalTracksDurationInSeconds: 733,
+        },
+        tracks:[ 
+        {
+        coverImageUrl:'fiftyCent.svg',
+        artistName: '1-Kla$',
+        title: 'Почему',
+        fileUrl: 'Markul - B.I.D.mp3',
+        isHot: false,
+        },
+        { 
+        coverImageUrl:'eminem.svg',
+        artistName: 'Markul',    
+        title: 'BID',
+        fileUrl: 'Markul - B.I.D.mp3',
+        isHot: true,
+        },
+        ],
+    }
+
+      
+    let titlePlaylistImage = document.createElement('img');
+    titlePlaylistImage.src = playlist.coverImageUrl;
+    document.body.append(titlePlaylistImage);
+
+    let titlePlaylistName = document.createElement('h2');
+    titlePlaylistName.append(playlist.title);
+    document.body.append(titlePlaylistName);
+
+    let trackList = document.createElement('ul');
+
+    let firstTrack = document.createElement ('li');
+    firstTrack.append(playlist.tracks[0].artistName + playlist.tracks[0].title);
+    let firstTrackImage = document.createElement('img');
+    firstTrackImage.src = playlist.tracks[0].coverImageUrl
+    let firstTrackAudio = document.createElement ('audio');
+    firstTrackAudio.src = 'Markul - B.I.D.mp3';
+    firstTrackAudio.controls = true;
+    document.body.append(firstTrack);
+    document.body.append(firstTrackImage);
+    document.body.append(firstTrackAudio);
+ 
+
+    let secondTrack = document.createElement ('li');
+    secondTrack.innerText = (playlist.tracks[1].artistName + playlist.tracks[1].title);
+    let secondTrackImage = document.createElement('img');
+    secondTrackImage.src = playlist.tracks[1].coverImageUrl
+    let secondTrackAudio = document.createElement ('audio');
+    secondTrackAudio.src = 'Markul - B.I.D.mp3';
+    secondTrackAudio.controls = true;
+    document.body.append(secondTrack);
+    document.body.append(secondTrackImage);
+    document.body.append(secondTrackAudio);
+
+
+    document.body.append(trackList);
+
+    </script>
+
+</body>

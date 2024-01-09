@@ -1,0 +1,56 @@
+<body>
+    <script>
+        const info = {
+            title: 'it-incubator',
+            graduatesCount: 2000,
+            areYouChampion: true,
+            technologies:
+                [{
+                    title: 'Front',
+                    id: 1
+                },
+                {
+                    title: 'Back',
+                    id: 2
+                },
+                {
+                    title: 'DevOps',
+                    id: 3
+                },],
+        }
+
+
+        let pageTitleElement = document.createElement('h1');
+        pageTitleElement.innerText = info.title;
+        document.body.append(pageTitleElement);
+
+        let graduatesCountElement = document.createElement('input');
+        graduatesCountElement.value = info.graduatesCount;
+        document.body.append(graduatesCountElement);
+
+        let areYouChampionElement = document.createElement('input');
+        areYouChampionElement.type = 'checkbox';
+        areYouChampionElement.checked = info.areYouChampion;
+        document.body.append(areYouChampionElement);
+
+        let technologiesElement = document.createElement('select');
+
+        let technologies0OptionElement = document.createElement('option');
+        technologies0OptionElement.value = 1;
+        technologies0OptionElement.append(info.technologies[0].title);
+        technologiesElement.append(technologies0OptionElement);
+
+        let technologies1OptionElement = document.createElement('option');
+        technologies1OptionElement.value = 2;
+        technologies1OptionElement.append(info.technologies[1].title);
+        technologiesElement.append(technologies1OptionElement);
+
+        let technologies2OptionElement = document.createElement('option');
+        technologies2OptionElement.value = 3;
+        technologies2OptionElement.append(info.technologies[2].title);
+        technologiesElement.append(technologies2OptionElement);
+
+        document.body.append(technologiesElement);
+
+    </script>
+</body>
