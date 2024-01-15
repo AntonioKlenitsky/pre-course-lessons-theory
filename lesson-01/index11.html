@@ -35,11 +35,11 @@
         function renderPlaylistHeader(playlistForRendering) {
             let titlePlaylistImage = document.createElement('img');
             titlePlaylistImage.src = playlistForRendering.coverImageUrl;
+            titlePlaylistImage.append(playlistForRendering);
             let titlePlaylistName = document.createElement('h2');
             titlePlaylistName.append(playlistForRendering.title);
-            document.body.append(
-                titlePlaylistImage,
-                titlePlaylistName);
+
+            document.body.append(titlePlaylistImage,titlePlaylistName);
         }
         function renderTrack(inputTrackForRendering) {
             let firstTrack = document.createElement('div');
